@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+<body>
+    <header>
+      
+            <a href="#"><img id="logo" src="data:image/png;base64,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"></a>
+       
+            <ul class="list-midol-header">
+
+        <div class="products-dropdawn"> 
+              <li><a href="#">products </a><i class="fa-solid fa-square-caret-down"></i> </li> 
+             <div class="products-content">
+               <ol class="">
+                 <li><a class="lnk" href="#">fleet</a><button class="btn">NEW</button></li>
+                 <li><a class="lnk-manage" href="#">manage your fleet operation</a></li>
+                 <li><a class="lnk" href="#">adress autofill </a><button class="btn">NEW</button></li>
+                 <li><a class="lnk-manage" href="#">simply and enhance address from fill</a></li>
+                 <li><a class="lnk" href="#">Navigation SDK </a></li> 
+                 <li><a class="lnk-manage" href="#">turn-by-turn routin</a></li>
+                 <li><a class="lnk" href="#">studio</a></li>
+                 <li><a class="lnk-manage" href="#">disign custom maps</a></li>
+                 <li><a class="lnk" href="#">search</a></li>
+                 <li><a class="lnk-manage" href="#">search points-of-interest,address,and places</a></li>
+            
+              </ol>
+              
+                <ol>
+                  <li><a class="lnk" href="#">maps</a></li>
+                  <li><a class="lnk-manage" href="#">smooth,fast,real-time maps</a></li>
+                  <li><a class="lnk" href="#">mapbox GLJS </a></li>
+                  <li><a class="lnk-manage" href="#">javeScrip librery for vector maps</a></li>
+                  <li><a class="lnk" href="#">Static Maps </a></li> 
+                  <li><a class="lnk-manage" href="#">Display your maps anywhare</a></li>
+                  <li><a class="lnk" href="#">Mapbox Tiling Service </a></li>
+                  <li><a class="lnk-manage" href="#">Transform geo data into vector tiles</a></li>
+                  <li><a class="lnk" href="#">Movement Data</a></li>
+                  <li><a class="lnk-manage" href="#">Dataset of population movement</a></li>
+             
+               </ol>
+
+               <ol>
+                <li><a class="lnk" href="#">Boundaries</a></li>
+                <li><a class="lnk-manage" href="#">4 million global boundaries</a></li>
+                <li><a class="lnk" href="#">Mobile Maps SDK </a></li>
+                <li><a class="lnk-manage" href="#">the most compelling map experience</a></li>
+                <li><a class="lnk" href="#">visio </a></li> 
+                <li><a class="lnk-manage" href="#">Second set of eyes for your car</a></li>
+                <li><a class="lnk" href="#">Atlas </a></li>
+                <li><a class="lnk-manage" href="#">Mapox on-premise</a></li>
+                <li><a class="lnk" href="#">Dash</a></li>
+                <li><a class="lnk-manage" href="#">Beautiful maps,live traffic,music and voice for cars</a></li>
+           
+             </ol>
+              
+
+               </div>
+                 </div>   
+ <div class="dropdown">      
+          
+    <li><a href="#">solution</a> <i class="fa-solid fa-square-caret-down"></i></li>
+          
+                    <div class="dropdown-content">
+                         <ol>
+                             <li> <a class="lnk" href="#">logistics</a></li>
+                                <li><a class="lnk"  href="#">automotive</a></li>
+                                  <li> <a class="lnk"  href="#">outdoors</a></li>
+                                    <li><a class="lnk"  href="#">retail</a></li>
+                                      <li><a class="lnk"  href="#">business intelligence</a></li>
+                                        <li><a class="lnk"  href="#">real estate</a></li>
+                                          </ol>     
+                                            </div>        
+                                              </div>
+
+<div class="dvlp-dropdawn">
+    <li><a href="#">developers</a><i class="fa-solid fa-square-caret-down"></i></li>
+      <div class="dvp-content">
+          <ol>
+               <li><a class="lnk"  href="#">Documentation</a></li>
+                 <li><a class="lnk"  href="#">webinars</a></li>
+                  <li><a class="lnk"  href="#">how-to-video</a></li>
+                   <li><a class="lnk"  href="#">Developer Network</a></li>
+                    <li><a class="lnk"  href="#">support</a></li>
+                     </ol>
+                      </div>
+                       </div> 
+<div class="cpny-dropdawn">        
+           <li><a href="#">company </a><i class="fa-solid fa-square-caret-down"></i></li>
+<div class="cpny-content">
+    <ol>
+    <li><a class="lnk"  href="#">about mapbox</a></li>
+    <li><a class="lnk"  href="#">careers</a></li>
+    <li><a class="lnk"  href="#">sustainability</a></li>
+    <li><a class="lnk"  href="#">community</a></li>
+    <li><a class="lnk"  href="#">Education</a></li>
+    <li><a class="lnk"  href="#">press</a></li>
+    <li><a class="lnk"  href="#">contact</a></li>
+</ol>
+</div>
+</div> 
+
+             <li><a href="#">customers</a></li>
+             <li><a href="#">pricing</a></li>
+             <li><a href="#">blog</a></li> 
+    </ul>  
+     <ul class="list-last-header">
+            <li class="log-in">login</li>
+            <li><button  class="sign-up">sign up</button></li>
+     </ul>
+    </header>
+
+        <!----------- THE END OF HEADER ------------>
+<div class="ddd">
+    <h1>Maps and location <br>for developer </h1>
+    <h2>Precise location data and powerful developer tools to change
+    <br> the way we navigate the world.</h2>
+  </div>
+    <button class="mapping">start mapping for free</button>
+<div class="video-background">
+  <video autoplay="autoplay" muted=""  loop="infinity" src="map.mp4" type="video.mp4"></video> 
+</div>
+<i class="fa-thin fa-arrow-left"></i>
+<div class="arrow-icones">
+<i id="font" class="fa-solid fa-circle-arrow-left"></i>
+<i id="font" class="fa-solid fa-circle-arrow-right"></i>
+</div>
+<h3>TRUSTID BY THE INDISTRY LEADERS</h3>
+<section class="all-photo">
+
+<div class="logo-photos-one">
+<img class="gm-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2Kz35Yy5LZTUSlKeYsW_X11f4A5JUQs1XpQ&usqp=CAU">
+<img class="cnn-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3pQVBxjFHEev7JUOg7tZsxzl-I3oWQ0DZDQ&usqp=CAU">
+<img class="bmw-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPIFP9AiUsKcBrPY0tCMfAK1lCzbMuSvzT-A&usqp=CAU">
+<img class="national-logo" src="data:image/png;base64,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">
+<img class="traval-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLkEnXjMLDy4vGx3jUS8dxQPPuNtWz536BhQ&usqp=CAU">
+</div>
+
+<div class="logo-photos-two">
+<img class="instacart-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb9bDcgcEE0T0PSdZfWVlupd1uy2S47CfY4Q&usqp=CAU">
+<img class="weather-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPfR0XAU3Kyc3DzTkhFwIp7doTAvIIXDm7GA&usqp=CAU">
+<img class="new-york" src="data:image/png;base64,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">
+<img class="toyota-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF5PfWApJAaqhMp3SJKSchjcOJ9pj-BtZgqw&usqp=CAU">
+<img class="rever-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6hY3nWJyWNcyt7AEn11rkAmKuehiCScmocw&usqp=CAU">
+</div>
+</section>
+
+<a href="#"><h4>view  customer  story <i class="fa-solid fa-arrow-right-long"></i></h4></a>
+
+<div class="navigation-div">
+<h5 class="navigation">NAVIGATION</h5>
+<p class="navigation-p">Mapbox provides powerful routing engines, accurate,<br>
+  traffic-powered travel times, and intuitive turn-by-turn<br>
+  directions to help you build engaging navigation<br>
+  experiences.</p>
+  <button class="btn-explorer"><a href="#">Explorer navigation  <i class="fa-solid fa-arrow-right-long"></i></a></butnto>
+</div>
+<div class="div-photos">
+  <img class="phone-photo" src="/home/hakim/Desktop/cours html/mapbox clone/image2_files/change1.png">
+  <img class="ipad-photo" src="/home/hakim/Desktop/cours html/mapbox clone/image2_files/change3.png">
+</div>
+<div class="studio-div">
+
+<img class="cart-image" src="/home/hakim/Desktop/cours html/mapbox clone/image2_files/carte.jpeg">
+  
+<nav class="studio-nav">
+
+<h6 class="studio-titre">Mapbox Studio</h6>
+<p class="studio-p">Mapbox Studio is like Photoshop, for maps. We give <br>
+    designers control over everything from colors and fonts, to<br>
+     3D features and camera angles, to<br>
+     the pitch of the map as a<br>
+     car enters a turn.</p>
+     <button class="btn-explorer"><a href="#">learning about studio <i class="fa-solid fa-arrow-right-long"></i></a></butnto>
+</nav>
+</div>
+
+<div class="navigation-div">
+  <h5 class="navigation">Maps</h5>
+  <p class="navigation-p">Our APIs, SDKs, and live updating map data give <br>
+    developers tools to build better mapping, navigation, and<br>
+     search experiences across platforms.</p>
+    <button class="btn-explorer"><a href="#">learn about maps  <i class="fa-solid fa-arrow-right-long"></i></a></butnto>
+   </div>
+  <div class="localisation" > 
+    <img class="loc-one" src="/home/hakim/Desktop/cours html/mapbox clone/image1.png">
+    <img class="loc-two" src="/home/hakim/Desktop/cours html/mapbox clone/image2_files/glob.png">
+  </div>  
+  <div class="seach-div">
+    
+    <img class="seach-photo" src="/home/hakim/Desktop/cours html/mapbox clone/image2_files/image3.png">
+   
+    <nav class="seach-nav">
+     <h5 class="navigation">Search</h5>
+     <p class="navigation-p">Search and geocoding is tied to everything we build —<br> 
+     maps, navigation, AR — and underlies every app that helps<br>
+     humans explore their world.</p>
+     <button class="btn-explorer"><a href="#">Discover seach<i class="fa-solid fa-arrow-right-long"></i></a></butnto>
+    </nav>
+    </div>
+
+ <section class="section-custom" >
+ <div class="all-costm">
+    <nav class="custo-nav">
+      <p class="green-color">CUSTOMER SHOWCASE</p>
+      <img class="" src="/home/hakim/Desktop/cours html/mapbox clone/image2_files/tof.svg">
+      <p class="navigation-p">Plan and optimize your route at the<br>
+       snap of a photo</p>
+       <button class="btn-explorer"><a href="#">Discover seach<i class="fa-solid fa-arrow-right-long"></i></a></butnto>
+    </nav>
+      <img class="pjpeg" src="/home/hakim/Desktop/cours html/mapbox clone/image2_files/p.jpeg"> 
+ </div>
+</section>
+<div class="dicovr-div">
+  <img class="phon-png" src="/home/hakim/Desktop/cours html/mapbox clone/image2_files/phon.png">
+
+  <nav class="discover-nav">
+  <h5 class="navigation">Vision</h5>
+     <p class="navigation-p">The Mapbox Vision SDK describes every curb, lane, street<br>
+       sign, and road hazard it sees as data. Developers use the<br>
+        SDK's AI-powered semantic segmentation, object<br>
+         detection, and classification to deliver precise navigation<br>
+          guidance, display driver assistance alerts, and detect and <br>
+          map road incidents.</p>
+     <button class="btn-explorer"><a href="#">Discover vision<i class="fa-solid fa-arrow-right-long"></i></a></butnto>
+     </nav>
+</div>
+<div class="data-div">
+  <nav class="data-nav">
+  <h5 class="navigation">Data</h5>
+     <p class="navigation-p">Our data is powered by hundreds of data sources, and a<br>
+        distributed global users base of more than half a billion <br>
+        monthly active users.</p>
+     <button class="btn-explorer"><a href="#">Discover vision<i class="fa-solid fa-arrow-right-long"></i></a></butnto>
+     </nav> 
+      <img class="techno" src="/home/hakim/Desktop/cours html/mapbox clone/image2_files/techologi.jpeg">   
+</div>
+<div class="atlas-div">
+  <img class="tt-photo" src="/home/hakim/Desktop/cours html/mapbox clone/image2_files/tt.jpeg">
+  <nav class="atlas-nav">
+    <h5 class="navigation">Atlas</h5>
+     <p class="navigation-p">With Atlas, you can self-host Mapbox maps <br>
+       and geocoding APIs, Streets, Satellite, and Terrain tilesets, and<br>
+        Mapbox Studio on your network, behind a firewall, or<br>
+         even air-gapped. Use Atlas to power on-premises <br>
+         applications using Mapbox GL JS v2 and Mapbox Maps <br>
+         SDKs for iOS and Android.</p>
+     <button class="btn-explorer"><a href="#">self-host-with Atlas<i class="fa-solid fa-arrow-right-long"></i></a></butnto>
+  </nav>
+</div>
+
+<div class="ready-div">
+  <nav class="n-nav">
+<h5 class="navigation">Ready to get started?</h5>
+<p class="navigation-p">Create an account or talk to one of our experts</p>
+</nav>
+<nav class="bt-nav">
+<nav class="nav-bt">
+<button  class="sign-up-free">sign up for free</button>
+<button class="btn-explorer"><a href="#">contact sales</a></butnto>
+</nav>
+</nav>
+</div>
+<!-- -------------------the end of body------------------ -->
+<footer class="">
+  <div class="last">
+
+  <a href="#"><img id="logo-footer" src="data:image/png;base64,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"></a></li>
+       
+  <ol class="liste-one">
+    <li class="prd">PRODUCTS</li>
+    <li><a class="nnn"  href="#">Fleet</a></li>
+    <li><a class="nnn"  href="#">Address Autofill</a></li>
+    <li><a class="nnn"  href="#">Navigation SDK</a></li>
+    <li><a class="nnn"  href="#">Dash</a></li>
+    <li><a class="nnn"  href="#">Search</a></li>
+    <li><a class="nnn"  href="#">Maps</a></li>
+    <li><a class="nnn"  href="#">Mobile Maps SDK</a></li>
+    <li><a class="nnn"  href="#">Studio</a></li>
+    <li><a class="nnn"  href="#">Data</a></li>
+    <li><a class="nnn"  href="#">Vision</a></li>
+    <li><a class="nnn"  href="#">atlas</a></li>
+    <li><a class="nnn"  href="#">-</a></li>
+    <li><a class="nnn"  href="#">pricing</li>
+  </ol>
+  <ol class="liste-2">
+    <li class="cmp">COMPANY</li>
+    <li><a class="nnn"  href="#"> About Mapbox</a></li>
+     <li><a class="nnn"  href="#">Customers</a></li>
+    <li><a class="nnn"  href="#">Careers</a></li>
+    <li><a class="nnn"  href="#">Sustainability</a></li>
+    <li><a class="nnn"  href="#">Community</a></li>
+    <li><a class="nnn"  href="#">Press</a></li>
+    <li><a class="nnn"  href="#">contact</a></li>
+    <li><a class="nnn"  href="#">-</a></li>
+    <li><a class="nnn"  href="#">Blog</a></li>
+  </ol>
+<ol class="liste-3">
+  <li class="dvlp"><a href="#">DEVELOPER</a></li>
+  <li><a class="nnn"  href="#">Documentation</a></li>
+  <li><a class="nnn" href="#">Getting started</a></li>
+  <li><a class="nnn" href="#">Tutorials</a></li>
+  <li><a class="nnn" href="#">Troubleshooting</a></li>
+  <li><a class="nnn" href="#">Webinars</a></li>
+  <li><a class="nnn" href="#">How-to-videos</a></li>
+  <li><a class="nnn" href="#">Developer Network</a></li>
+  <li><a class="nnn" href="#">Platform</a></li>
+  <li><a class="nnn" href="#">Status</a></li>
+  <li><a class="nnn" href="#">-</a></li>
+  <li><a class="nnn" href="#">support</a></li>
+</ol>
+</div>
+<div class="all-last">
+    <ol class="mpbx">
+      <li class="nnn">© Mapbox</a></li>
+      <li><a class="nnn" href="#">Terms</a></li>
+      <li><a class="nnn" href="#">Privacy</a></li>
+      <li><a class="nnn" href="#">Security</a></li>
+    </ol>
+    
+  <nav class="last-icons">
+    <i class="fa-solid fa-face-angry-horns"></i>
+    <i class="fa-solid fa-shield-cat"></i>
+    <i class="fa-brands fa-twitter-square"></i>
+    <i class="fa-solid fa-block-quote"></i>
+    <i class="fa-brands fa-facebook-square"></i>
+    <i class="fa-brands fa-instagram-square"></i>
+
+  </nav>
+</div>
+
+</footer>
+
+
+</body>
+</body>
+</html>
