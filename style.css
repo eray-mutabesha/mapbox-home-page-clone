@@ -13,6 +13,7 @@ body{
     position: fixed;
     z-index: 10;
     top: 0%; 
+    opacity: 0.7;
 }
 ul,li{
     list-style: none;
@@ -35,7 +36,8 @@ li{
 .list-last-header{
     align-items: center;
     display: flex;
-    color: white;    
+    color: white;   
+    margin-left: 150px; 
 }
 #logo{
     height: 80px;
@@ -174,12 +176,9 @@ video{
     width: 900px;
     height: 500px;
     border-radius: 20px;
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.664);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.085);
     margin-left: 250px; 
     margin-top: 60px;
-
-
-    
 }
 #font{
     color: rgba(255, 255, 255, 0.637);
@@ -192,7 +191,7 @@ video{
 .arrow-icones{
     text-align: center;   
 }
-h3{
+.indistry{
     color: white;
     text-align: center;
     font-size: 15px;
@@ -242,6 +241,23 @@ font-size: 50px;
     color: rgba(255, 255, 255, 0.658);
     font-family: 'Poppins', sans-serif; 
 }
+.navigation-pp{
+    color: white;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 50px;
+    }
+
+    .navigation-ppp{
+        color: rgba(255, 255, 255, 0.658);
+        font-family: 'Poppins', sans-serif; 
+    }
+    .navigation-plan{
+        color: rgba(255, 255, 255, 0.658);
+        font-family: 'Poppins', sans-serif; 
+    }
+
+
+
 .btn-explorer{
     color: wheat;
     width: 200px;
@@ -325,6 +341,7 @@ margin-top:60px;
 .seach-nav{
     display: -ms-inline-grid;
 }
+
 .pjpeg{
     width: 600px;
     height: 500px;
@@ -497,7 +514,7 @@ grid-template-rows: 150px;
     }
     .list-last-header{  
         margin-top: -8px;
-         margin-inline: -2%;
+         margin-inline: 10%;
     } 
     video{
     margin-left: 80px;
@@ -601,7 +618,7 @@ grid-template-rows: 150px;
         margin-left: 450px;
         display: flex;
     }
-   h3{
+   .indistry{
        margin-left:450px;
    }
     h4, h2, h1{   
@@ -670,11 +687,38 @@ margin-left:650px;
         margin-left: 380px;
     }
 }
-
 @media (max-width:970px){
 h1{
 font-size: 80px;
 }
+      .arrow-icones,.indistry,h4{
+        margin-left: 150px
+      }
+
+    .all-photo{
+        margin-left: 300px
+    }
+}
+
+@media (max-width:801px){
+.mapping{
+    width: 250px;
+}
+}
+@media (max-width:781px){
+
+    .arrow-icones{
+        margin-left: 50px;
+      }
+    .all-photo{
+        margin-left: -300px
+    }
+
+}
+
+
+
+
 @media (max-width:878px){
     .ddd{
         margin-left: 200px;
@@ -707,7 +751,28 @@ h1{
 h1{
     font-size: 48px;
 }
+.arrow-icones{
+    margin-left: 450px;
+}
+
+
  }
+ @media (max-width:733px){
+#trc{
+    margin-left: 100px;
+}
+ }
+ @media (max-width:733px){
+    #trc{
+        margin-left: 100px;
+    }
+     }
+ @media (max-width:609px){
+        #trc{
+            margin-left: 200px;
+        }
+ }
+ 
 @media (max-width:718px){
     .ddd{
         margin-left: -100px;
@@ -732,6 +797,12 @@ h1{
 h1{
     font-size: 40px;
 }
+}
+@media (max-width:593px){
+
+    .indistry{
+        font-size: 20px;
+    }
 }
 @media (max-width:690px){
     .ddd{
@@ -777,14 +848,11 @@ h1{
 h2{
     font-size: 50px;
 }
-.mapping{
-
+@media (max-width:505px){
+    #trc{
+        margin-left: 300px;
+    }
 }
-
-
-}
-
-
 
 
 @media (max-width:470px){
@@ -832,6 +900,7 @@ h2{
     }
 .list-last-header{
     margin-top: 30px;
+    margin-inline:-2% ;
 }
 .mapping{
     height: 90px;
@@ -879,6 +948,13 @@ h4{
     width: 300px;
     font-size: 30px;
 }
+.seach-div{
+    margin-left: 300px
+}
+.seach-photo{
+    width: 1000px;
+    height: 1000px;
+}
 
 
 .studio-titre{
@@ -886,23 +962,72 @@ font-size: 80px;
 }
 .studio-p{
     font-size: 60px;
+    color: rgba(255, 255, 255, 0.645);
+}
+.studio-div{
+    margin-left: 550px;
 }
 .cart-image{
-    width: 900px;
-    height: 800px;
-    position: relative;
-    left:-100px;
+    width: 1000px;
+    height: 500px;
 }
-
-
-
-
-
-
-
+.navigation-plan{
+    font-size: 20px;
+}
+.phon-png{
+    width: 1000px;
+    height: 500px;
 
 }
+.dicovr-div{
+margin-left: 400px;
+}
+.data-div{
+    margin-left: 550px;
+}
+.techno{
+    width: 1000px;
+    height: 500px;
+}
+.atlas-div{
+    margin-left: 550px;
+}
+.tt-photo{
+    width: 1000px;
+    height: 500px;
+}
+.ready-div{
+    width: 1000px;
+    height: 500px;
 
+    margin-left: 40px;
+    
+}
+
+#logo-footer{
+    width: 200px;
+    height: 100px;
+}
+.prd{
+    font-size: 30px;
+}
+.nnn,.cmp,.dvlp{
+    font-size: 30px;
+}
+.all-last{
+    column-gap: 100px;
+}
+.mpbx{
+    column-gap: 70px;
+    
+}
+
+}
+@media (max-width:353px) {
+    .all-photo{
+        margin-left: -100px;
+    }
+}
 
 
 
