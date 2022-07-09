@@ -600,12 +600,7 @@ grid-template-rows: 150px;
 .ddd{
     justify-content: center;
 }
-    /* h2, h1{   
-        margin-left: 200px;
-    }*/
 }
-
-
 @media (max-width:784px) {
 
     .mapping{
@@ -715,10 +710,6 @@ font-size: 80px;
     }
 
 }
-
-
-
-
 @media (max-width:878px){
     .ddd{
         margin-left: 200px;
@@ -727,7 +718,6 @@ h1{
     font-size: 70px;
 }
 }
-
 @media (max-width:810px){
     .ddd{
         margin-left: 200px;
@@ -825,7 +815,6 @@ h2{
     margin-left: 400px;
 }
 }
-}
 @media (max-width:614px){
     .ddd{
         margin-left:90px ;
@@ -848,6 +837,7 @@ h1{
 h2{
     font-size: 50px;
 }
+  }
 @media (max-width:505px){
     #trc{
         margin-left: 300px;
@@ -1028,43 +1018,3 @@ margin-left: 400px;
         margin-left: -100px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
