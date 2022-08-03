@@ -53,7 +53,7 @@ li{
     color:white;
 }
 .sign-up{
-    background-color: blue;
+    background-color: rgba(0, 0, 255, 0.764);
     color: white;
     height: 40px;
     width: 80px;
@@ -518,7 +518,17 @@ grid-template-rows: 150px;
         border-radius: 40px;
         
         }
-
+        .last-icons{
+            color: wheat;
+            display: flex;
+            margin: 20px;
+            column-gap: 30px;
+        }
+        .all-last{
+            display: flex;
+            margin-top: 80px;
+            column-gap:400px;
+        }
 .ipad-photo{
     height: 350px;
     margin-left: 30px;
@@ -636,6 +646,11 @@ grid-template-rows: 150px;
     .studio-div{
         column-gap: 50px;
     } 
+    .all-last{
+        display: flex;
+        margin-top: 80px;
+        column-gap:300px;
+    }
         }
  @media (max-width:809px) { 
             .studio-div{
@@ -711,6 +726,12 @@ grid-template-rows: 150px;
             height:300px;
             margin-top:-40px;
         }
+        .all-last{
+            font-size: 10px;
+            display: flex;
+            margin-top: 80px;
+            column-gap:0px;
+        }
 }
 /* yyyyyyyyyyyyyyy */
 @media(max-width:910px){
@@ -722,6 +743,12 @@ grid-template-rows: 150px;
     .seach-photo{
         height:400px;
         width:500px;
+    }
+    .all-last{
+        font-size: 5px;
+        display: flex;
+        margin-top: 80px;
+        column-gap:0px;
     }
 }
 @media(max-width:485px){
@@ -809,6 +836,11 @@ grid-template-rows: 150px;
     .video-div{
         width: 800px;
         height: 400px;
+    }
+    .all-last{
+        display: flex;
+        margin-top: 80px;
+        column-gap:200px;
     }
 }
  @media (max-width:998px){
@@ -911,13 +943,13 @@ font-size: 80px;
         width: 400px;
         height: 300px;
     }
+    .last-icons{
+        color: wheat;
+        display: flex;
+        margin: 20px;
+        column-gap: 10px;
+    }
 }
-@media (max-width:510px){
-    .techno{
-        width: 400px;
-        height: 300px;
-    }
-    }
     @media (max-width:380px){
         .techno{
             width: 300px;
@@ -1100,12 +1132,22 @@ h2{
         column-gap: 20px;
         margin-top: 200px;
     }
+    .all-last{
+        display: flex;
+        margin-top: 80px;
+        column-gap:100px;
+    }
    }
    @media(max-width:724px){
     .last{
         display:inline-flex;
         column-gap: 10px;
         margin-top: 200px;
+    }
+    .all-last{
+        display: flex;
+        margin-top: 80px;
+        column-gap:50px;
     }
       }
     @media(max-width:673px){
@@ -1139,6 +1181,9 @@ h2{
             .last{
                 font-size: 4px;
     
+            }
+            .all-last{
+                display: grid;
             }
              }
              @media(max-width:355px){
