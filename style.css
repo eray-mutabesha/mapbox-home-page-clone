@@ -1281,3 +1281,14 @@ header{
                          line-height: 2.5;    
                     }
                     } 
+                    @media (max-width:365px) {
+                        .list-last-header{
+                            margin-left:-20px;
+                    }
+                     }
+                     @media (max-width:330px) {
+                        .list-last-header{
+                            margin-left:-40px;
+                    }
+                    
+                     }
